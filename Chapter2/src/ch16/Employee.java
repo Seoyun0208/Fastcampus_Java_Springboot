@@ -7,6 +7,12 @@ public class Employee {
 	private int employeeId;
 	private String employeeName;
 	private String department;
+	
+	public Employee() {
+		
+		serialNum++;
+		employeeId = serialNum;
+	}
 		
 	public int getEmployeeId() {
 		return employeeId;
