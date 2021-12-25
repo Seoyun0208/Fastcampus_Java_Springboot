@@ -15,7 +15,7 @@ public class ObjectCopyTest {
 		
 		System.arraycopy(library, 0, copyLibrary, 0, 5);
 		
-		System.out.println("====library1====");
+		System.out.println("====librar1====");
 		for(Book book : library) {
 			System.out.println(book);
 			book.showInfo();
