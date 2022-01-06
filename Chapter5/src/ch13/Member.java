@@ -1,9 +1,13 @@
 package ch13;
 
-public class Member implements Comparable<Member>{
+import java.util.Comparator;
+
+public class Member implements Comparator<Member>{
 	
 	private int memberId;
 	private String memberName;
+	
+	public Member() {};
 	
 	public Member(int memberId, String memberName) {
 		this.memberId = memberId;
@@ -51,15 +55,8 @@ public class Member implements Comparable<Member>{
 	}
 
 	@Override
-	public int compareTo(Member member) {
-
-		/*
-		if(this.memberId > member.memberId) return 1;
-		else if(this.memberId < member.memberId) return -1;
-		else return 0;
-		*/
-		
-		return (this.memberId - member.memberId);
+	public int compare(Member member1, Member member2) {
+		return (member1.memberId - member2.memberId);
 	}
 	
 }
